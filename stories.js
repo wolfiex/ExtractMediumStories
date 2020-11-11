@@ -40,7 +40,7 @@ var data = [...document.querySelectorAll(`div[class="${itemclass}"]`)].map(d => 
 
   d.querySelectorAll("a").forEach((e, i) => {
     article[keys[i]] = e.innerText;
-    if (i === 0) article["url"] = e.href;
+    if (i === 0) article["url"] = e.href.split('?')[0];
   });
 
   return article
